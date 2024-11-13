@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: const Color.fromARGB(255, 65, 15, 32),
@@ -64,28 +64,28 @@ class _MyAppState extends State<MyApp> {
                   Text('Keep Your Vision Clear For Both Future And World')
                 ],
               ),
-              // Padding(
-              //   padding: EdgeInsets.only(left: 10, right: 10),
-              //   child: TextFormField(
-              //     decoration: InputDecoration(
-              //         hintText: 'Your Nickname',
-              //         hintStyle: const TextStyle(fontFamily: 'SourGummy'),
-              //         icon: const Icon(Icons.nature),
-              //         fillColor: Colors.blue.shade200,
-              //         filled: true),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 10, right: 10),
-              //   child: TextFormField(
-              //     decoration: InputDecoration(
-              //         hintText: 'Email Adress',
-              //         hintStyle: const TextStyle(fontFamily: 'SourGummy'),
-              //         icon: const Icon(Icons.email_rounded),
-              //         fillColor: Colors.blue.shade200,
-              //         filled: true),
-              //   ),
-              // ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      hintText: 'Your Nickname',
+                      hintStyle: const TextStyle(fontFamily: 'SourGummy'),
+                      icon: const Icon(Icons.nature),
+                      fillColor: Colors.blue.shade200,
+                      filled: true),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      hintText: 'Email Adress',
+                      hintStyle: const TextStyle(fontFamily: 'SourGummy'),
+                      icon: const Icon(Icons.email_rounded),
+                      fillColor: Colors.blue.shade200,
+                      filled: true),
+                ),
+              ),
             ],
           ),
         ),
