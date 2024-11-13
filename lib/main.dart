@@ -22,35 +22,50 @@ class _FluffState extends State<Fluff> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Row(
+            Row(
               children: [
                 Image(
-                  image: AssetImage('images/ioj.jpg'),
+                  image: const AssetImage('images/logo.jpg'),
                   width: 100,
                   height: 100,
+                  color: Colors.red.shade100,
                 ),
                 Column(
                   children: [
                     Text(
-                      'Meditator',
-                      style: TextStyle(color: Colors.red),
+                      'Goggles',
+                      style: TextStyle(
+                          color: Colors.red.shade100, fontFamily: 'SourGummy'),
                     )
                   ],
                 ),
-                Column(
+                const Column(
                   children: [
                     Text(
                       'App',
-                      style: TextStyle(color: Colors.red),
+                      style:
+                          TextStyle(color: Colors.red, fontFamily: 'SourGummy'),
                     )
                   ],
                 ),
               ],
             ),
-            TextFormField(
-              decoration: const InputDecoration(
-                hintText: 'Nickname',
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Your Nickname',
+                    hintStyle: const TextStyle(fontFamily: 'SourGummy'),
+                    fillColor: Colors.blue.shade200,
+                    filled: true),
               ),
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'Email Adress',
+                  hintStyle: const TextStyle(fontFamily: 'SourGummy'),
+                  fillColor: Colors.blue.shade200,
+                  filled: true),
             ),
           ],
         ),
