@@ -23,47 +23,54 @@ class _MyAppState extends State<MyApp> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Image(
-                    image: const AssetImage('images/logo.jpg'),
-                    width: 100,
-                    height: 100,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Goggles',
-                        style: TextStyle(
-                            color: Colors.pink, fontFamily: 'SourGummy'),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    children: [
-                      Text(
-                        'App',
-                        style: TextStyle(
-                            color: Colors.pink, fontFamily: 'SourGummy'),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  const Text('Keep Your Vision Clear For Both Future And World')
-                ],
+              const SizedBox(
+                height: 70,
               ),
+              const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image(
+                      image: AssetImage('images/logo.jpg'),
+                      width: 100,
+                      height: 100,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Goggles',
+                          style: TextStyle(
+                            color: Colors.pink,
+                            fontFamily: 'SourGummy',
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'App',
+                          style: TextStyle(
+                            color: Colors.pink,
+                            fontFamily: 'SourGummy',
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Center(
+                      child: Text('Login',
+                          style: TextStyle(
+                            color: Color.fromARGB(67, 129, 54, 122),
+                            fontFamily: 'SourGummy',
+                            fontSize: 26,
+                          )),
+                    ),
+                  ]),
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
