@@ -63,15 +63,24 @@ class _MyAppState extends State<MyApp> {
                         ),
                       ],
                     ),
-                    Center(
-                      child: Text('Login',
-                          style: TextStyle(
-                            color: Color.fromARGB(67, 129, 54, 122),
-                            fontFamily: 'SourGummy',
-                            fontSize: 26,
-                          )),
-                    ),
                   ]),
+              const SizedBox(
+                height: 20,
+              ),
+              const Center(
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontFamily: 'SourGummy',
+                    fontSize: 46,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
@@ -104,38 +113,45 @@ class _MyAppState extends State<MyApp> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(color: Colors.black))),
+                  enabled: true,
                 ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Profile(),
-                    ),
-                  );
-                },
-                child: const Text('Login'),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Profile(),
+                      ),
+                    );
+                  },
+                  child: const Text('Login'),
+                ),
               ),
               const Row(
                 children: [
-                  Text(
-                    'have\'nt got an account?',
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                        fontFamily: 'SourGummy',
-                        fontSize: 13,
-                        color: Colors.pink,
-                        fontWeight: FontWeight.bold),
+                  Center(
+                    child: Text(
+                      'have\'nt got an account?',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'SourGummy',
+                          fontSize: 13,
+                          color: Colors.pink,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
-                  Text(
-                    'Sign In?',
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                        fontFamily: 'SourGummy',
-                        fontSize: 13,
-                        color: Colors.blueAccent,
-                        fontWeight: FontWeight.bold),
+                  Center(
+                    child: Text(
+                      'Sign In?',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'SourGummy',
+                          fontSize: 13,
+                          color: Colors.blueAccent,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
               ),
