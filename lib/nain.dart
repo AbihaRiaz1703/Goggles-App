@@ -23,36 +23,28 @@ class _ProfileState extends State<Profile> {
       ),
       body: const SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Divider(
-              color: Colors.black,
-              thickness: 1,
-            ),
-            VerticalDivider(
-              color: Colors.black,
-              thickness: 1,
+            // Divider(
+            //   color: Colors.black,
+            //   thickness: 1,
+            // ),
+            // VerticalDivider(
+            //   color: Colors.black,
+            //   thickness: 1,
+            // ),
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('images/pp3.jfif'),
             ),
             CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage('images/pp1'),
+              radius: 50,
+              backgroundImage: AssetImage('images/pp4.jfif'),
             ),
             CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage('images/pp2'),
-            ),
-            CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage('images/pp3'),
-            ),
-            CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage('images/pp4'),
-            ),
-            CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage('images/pp5'),
+              radius: 50,
+              backgroundImage: AssetImage('images/pp5.jfif'),
             ),
             Row(
               children: [Text('Select to pick your AVATAR')],
