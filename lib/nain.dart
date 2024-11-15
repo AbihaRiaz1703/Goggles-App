@@ -25,6 +25,22 @@ class _ProfileState extends State<Profile> {
               radius: 80,
               backgroundImage: AssetImage('images/pp1'),
             ),
+            CircleAvatar(
+              radius: 80,
+              backgroundImage: AssetImage('images/pp2'),
+            ),
+            CircleAvatar(
+              radius: 80,
+              backgroundImage: AssetImage('images/pp3'),
+            ),
+            CircleAvatar(
+              radius: 80,
+              backgroundImage: AssetImage('images/pp4'),
+            ),
+            CircleAvatar(
+              radius: 80,
+              backgroundImage: AssetImage('images/pp5'),
+            ),
           ],
         ),
       ),
