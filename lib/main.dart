@@ -125,6 +125,16 @@ class _MyAppState extends State<MyApp> {
                     style: TextStyle(
                         fontFamily: 'SourGummy',
                         fontSize: 13,
+                        color: Colors.pink,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Sign In?',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontFamily: 'SourGummy',
+                        fontSize: 13,
+                        color: Colors.blueAccent,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
