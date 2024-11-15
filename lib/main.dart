@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:second_project/nain.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,9 +76,9 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      hintText: 'Your Nickname',
+                      hintText: 'Email Address',
                       hintStyle: const TextStyle(fontFamily: 'SourGummy'),
-                      icon: const Icon(Icons.nature),
+                      icon: const Icon(Icons.email_rounded),
                       fillColor: Colors.blue.shade200,
                       filled: true),
                 ),
@@ -86,13 +87,23 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      hintText: 'Email Adress',
+                      hintText: 'Password',
                       hintStyle: const TextStyle(fontFamily: 'SourGummy'),
-                      icon: const Icon(Icons.email_rounded),
+                      icon: const Icon(Icons.nature),
                       fillColor: Colors.blue.shade200,
                       filled: true),
                 ),
               ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Profile(),
+                      ),
+                    );
+                  },
+                  child: const Text('Login')),
             ],
           ),
         ),
