@@ -10,14 +10,22 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.teal,
       resizeToAvoidBottomInset: false,
-      body: SafeArea(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 65, 15, 32),
+      ),
+      body: const SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [],
+          children: [
+            CircleAvatar(
+              radius: 80,
+              backgroundImage: AssetImage('images/pp1'),
+            ),
+          ],
         ),
       ),
     );
