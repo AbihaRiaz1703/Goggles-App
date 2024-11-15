@@ -107,15 +107,28 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Profile(),
-                      ),
-                    );
-                  },
-                  child: const Text('Login')),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Profile(),
+                    ),
+                  );
+                },
+                child: const Text('Login'),
+              ),
+              const Row(
+                children: [
+                  Text(
+                    'have\'nt got an account?',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontFamily: 'SourGummy',
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
