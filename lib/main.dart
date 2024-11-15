@@ -76,11 +76,20 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      hintText: 'Email Address',
-                      hintStyle: const TextStyle(fontFamily: 'SourGummy'),
-                      icon: const Icon(Icons.email_rounded),
-                      fillColor: Colors.blue.shade200,
-                      filled: true),
+                    hintText: 'Email Address',
+                    hintStyle: const TextStyle(fontFamily: 'SourGummy'),
+                    icon: const Icon(Icons.email_rounded),
+                    fillColor: Colors.blue.shade200,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(color: Colors.black),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: Colors.black)),
+                    enabled: true,
+                  ),
                 ),
               ),
               Padding(
@@ -91,7 +100,10 @@ class _MyAppState extends State<MyApp> {
                       hintStyle: const TextStyle(fontFamily: 'SourGummy'),
                       icon: const Icon(Icons.nature),
                       fillColor: Colors.blue.shade200,
-                      filled: true),
+                      filled: true,
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(color: Colors.black))),
                 ),
               ),
               ElevatedButton(
