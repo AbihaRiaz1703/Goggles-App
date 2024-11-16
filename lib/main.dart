@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:second_project/nain.dart';
@@ -85,6 +87,7 @@ class _MyAppState extends State<MyApp> {
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
+                  keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: 'Email',
                     labelStyle: TextStyle(color: Colors.pink),
@@ -95,18 +98,23 @@ class _MyAppState extends State<MyApp> {
                     filled: true,
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide:
+                          const BorderSide(color: Colors.black, width: 2),
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(color: Colors.black)),
-                    enabled: true,
+                        borderSide:
+                            const BorderSide(color: Colors.black, width: 2)),
                   ),
+                  onSaved: (Value) {
+                    print(Value);
+                  },
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
+                  keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                       labelText: 'Email',
                       labelStyle: TextStyle(color: Colors.pink),

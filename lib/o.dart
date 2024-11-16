@@ -30,19 +30,24 @@ class _NameState extends State<Name> {
               height: 10,
             ),
             TextFormField(
+              keyboardType: TextInputType.name,
+              cursorColor: Colors.black,
               decoration: InputDecoration(
+                  labelText: 'Name',
+                  labelStyle: TextStyle(color: Colors.pink),
                   hintText: 'Real Name',
                   hintStyle: TextStyle(
-                    fontFamily: '',
                     color: const Color.fromARGB(255, 108, 184, 247),
                   ),
                   icon: Icon(Icons.sailing)),
             ),
             TextFormField(
+              keyboardType: TextInputType.name,
+              cursorColor: Colors.black,
               decoration: InputDecoration(
                   hintText: 'Nick Name',
                   hintStyle: TextStyle(
-                    fontFamily: '',
+                    fontFamily: 'SourGummy',
                     color: const Color.fromARGB(255, 108, 184, 247),
                   ),
                   icon: Icon(Icons.sailing)),
