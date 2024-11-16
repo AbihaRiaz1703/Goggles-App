@@ -75,6 +75,9 @@ flutter:
     - family: SourGummy-Italic-VariableFont_wdth,wght
       fonts:
         - asset: fonts/SourGummy-Italic-VariableFont_wdth,wght.ttf
+    - family: SourGummy
+      fonts:
+        - asset: fonts/SourGummy.ttf
 
   #
   # For details regarding fonts from package dependencies,

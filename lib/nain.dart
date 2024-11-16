@@ -26,7 +26,7 @@ class _ProfileState extends State<Profile> {
         title: const Text(
           'Profile Picture',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.pink),
+          style: TextStyle(color: Colors.pink, fontFamily: 'SourGummy'),
         ),
       ),
       body: SafeArea(

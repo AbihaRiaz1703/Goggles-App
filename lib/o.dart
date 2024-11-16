@@ -11,7 +11,7 @@ class _NameState extends State<Name> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 65, 15, 32),
+      backgroundColor: Color.fromARGB(255, 240, 230, 233),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 167, 77, 107),
         title: Text('Name For Use'),
@@ -19,9 +19,15 @@ class _NameState extends State<Name> {
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(
+              height: 30,
+            ),
             Text(
               'Write Your Name Here',
               style: TextStyle(fontSize: 30, color: Colors.blue),
+            ),
+            SizedBox(
+              height: 10,
             ),
             TextFormField(
               decoration: InputDecoration(
@@ -29,7 +35,17 @@ class _NameState extends State<Name> {
                   hintStyle: TextStyle(
                     fontFamily: '',
                     color: const Color.fromARGB(255, 108, 184, 247),
-                  )),
+                  ),
+                  icon: Icon(Icons.sailing)),
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'Nick Name',
+                  hintStyle: TextStyle(
+                    fontFamily: '',
+                    color: const Color.fromARGB(255, 108, 184, 247),
+                  ),
+                  icon: Icon(Icons.sailing)),
             ),
           ],
         ),
