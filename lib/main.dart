@@ -86,6 +86,8 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
                   decoration: InputDecoration(
+                    labelText: 'Email',
+                    labelStyle: TextStyle(color: Colors.pink),
                     hintText: 'Email Address',
                     hintStyle: const TextStyle(fontFamily: 'SourGummy'),
                     icon: const Icon(Icons.email_rounded),
@@ -106,6 +108,8 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: TextFormField(
                   decoration: InputDecoration(
+                      labelText: 'Email',
+                      labelStyle: TextStyle(color: Colors.pink),
                       hintText: 'Password',
                       hintStyle: const TextStyle(fontFamily: 'SourGummy'),
                       icon: const Icon(Icons.nature),
@@ -114,7 +118,9 @@ class _MyAppState extends State<MyApp> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(color: Colors.black))),
-                  enabled: true,
+                  onSaved: (Value) {
+                    print(Value);
+                  },
                 ),
               ),
               Center(
@@ -125,30 +131,22 @@ class _MyAppState extends State<MyApp> {
                   child: const Text('Login'),
                 ),
               ),
-              const Row(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Center(
-                    child: Text(
-                      'have\'nt got an account?',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: 'SourGummy',
-                          fontSize: 13,
-                          color: Colors.pink,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  Center(
-                    child: Text(
-                      'Sign In?',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: 'SourGummy',
-                          fontSize: 13,
-                          color: Colors.blueAccent,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                  RichText(
+                      text: TextSpan(
+                          text: 'Have/nt got an account yet?',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                          children: const [
+                        TextSpan(
+                            text: 'Sign in?',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(
+                            text: 'Now',
+                            style: TextStyle(fontWeight: FontWeight.bold))
+                      ])),
                 ],
               ),
             ],
