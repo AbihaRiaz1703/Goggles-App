@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:second_project/o.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -22,7 +23,7 @@ class _ProfileState extends State<Profile> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 65, 15, 32),
-        title: Text(
+        title: const Text(
           'Profile Picture',
           textAlign: TextAlign.center,
           style: TextStyle(color: Colors.pink),
@@ -59,8 +60,24 @@ class _ProfileState extends State<Profile> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text('Select to pick your AVATAR')],
-            )
+              children: [
+                Center(child: Text('Select to pick your AVATAR')),
+                SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
+            const SizedBox(height: 40),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Name(),
+                    ),
+                  );
+                },
+                child: const Text('Next')),
           ],
         ),
       ),
