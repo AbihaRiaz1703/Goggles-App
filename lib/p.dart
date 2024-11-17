@@ -23,20 +23,17 @@ class _ChatState extends State<Chat> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundImage: AssetImage('images/pp3.jfif'),
-              ),
-              title: Text('Abiha Riaz'),
-              subtitle: Text('hello world!'),
-              trailing: Text('2:34 PM'),
-            ),
-          ),
-          Expanded(
             child: ListView.builder(
                 itemCount: 30,
                 itemBuilder: (context, Index) {
-                  return Text('It\'s Me');
+                  return ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage('images/pp3.jfif'),
+                    ),
+                    title: Text('Abiha Riaz'),
+                    subtitle: Text('hello world!'),
+                    trailing: Text('2:34 PM'),
+                  );
                 }),
           ),
         ],
