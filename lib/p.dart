@@ -11,9 +11,9 @@ class _ChatState extends State<Chat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white30,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Your Chats',
           style: TextStyle(color: Colors.blue),
         ),
@@ -21,7 +21,25 @@ class _ChatState extends State<Chat> {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        // children: [ListTile(leading:,)],
+        children: [
+          Expanded(
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('images/pp3.jfif'),
+              ),
+              title: Text('Abiha Riaz'),
+              subtitle: Text('hello world!'),
+              trailing: Text('2:34 PM'),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+                itemCount: 30,
+                itemBuilder: (context, Index) {
+                  return Text('It\'s Me');
+                }),
+          ),
+        ],
       ),
     );
   }

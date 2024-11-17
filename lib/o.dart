@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:second_project/p.dart';
+
 class Name extends StatefulWidget {
+  static const String id = '/Name';
   const Name({super.key});
 
   @override
@@ -45,12 +48,27 @@ class _NameState extends State<Name> {
               keyboardType: TextInputType.name,
               cursorColor: Colors.black,
               decoration: InputDecoration(
+                  labelText: 'nickname',
+                  labelStyle: TextStyle(
+                    color: Colors.pink,
+                  ),
                   hintText: 'Nick Name',
                   hintStyle: TextStyle(
                     fontFamily: 'SourGummy',
                     color: const Color.fromARGB(255, 108, 184, 247),
                   ),
+                  prefixIcon: Icon(Icons.icecream_rounded),
+                  //one more icons exists is called "suffixIcon",
                   icon: Icon(Icons.sailing)),
+            ),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Chat()));
+                },
+                child: const Text('Login'),
+              ),
             ),
           ],
         ),
