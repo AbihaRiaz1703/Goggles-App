@@ -14,3 +14,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+YOU GET CODE ABOUT MAKING A uI,,NEXT ABOUT YOUR PROFILE SELECTION IN WHICH THERE ARE NAMES 
+AND PICTURES THEN YOU GET YOUR CHATS
